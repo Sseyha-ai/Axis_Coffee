@@ -70,6 +70,7 @@ Route::middleware(['auth'])->group(function () {
     //order 
 
     Route::get('order-list', [OrderController::class, 'index'])->name('order-list');
+    Route::post('/order/{type}', [OrderController::class, 'processOrder'])->name('order.process');
 
     // Other routes...
 
